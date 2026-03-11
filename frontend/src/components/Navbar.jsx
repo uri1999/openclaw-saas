@@ -36,7 +36,7 @@ const Navbar = ({ setCurrentPage }) => {
                     <div className="logo-icon">
                         <Terminal size={24} color="var(--accent-color)" />
                     </div>
-                    <span className="logo-text">In<span className="highlight-text">short</span></span>
+                    <span className="logo-text">In<span className="highlight-text">short</span> Agents</span>
                 </div>
 
                 <div className="nav-links desktop">
