@@ -137,7 +137,7 @@ const LandingPage = ({ setCurrentPage }) => {
                                 {[
                                     '1 Dedicated OpenClaw VM', 
                                     'Dedicated Core Instance',
-                                    /* 'Telegram Integration', */
+                                    'Web API Access',
                                     '500+ Daily Requests'
                                 ].map((f, i) => (
                                     <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px', color: '#fff' }}>
@@ -160,7 +160,7 @@ const LandingPage = ({ setCurrentPage }) => {
                                 {[
                                     '2 Dedicated OpenClaw VMs', 
                                     '2 Bundled n8n Workspaces', 
-                                    /* 'Telegram + WhatsApp Integration', */
+                                    'Advanced API Integrations',
                                     'Priority Scaling'
                                 ].map((f, i) => (
                                     <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px', color: '#fff' }}>

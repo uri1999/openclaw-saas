@@ -238,12 +238,14 @@ const SkilledAgents = ({ setCurrentPage }) => {
                             </div>
                         </div>
                         <div className="how-step">
-                            {/* <div className="hi-text">
-                                <h4>Connect Your Telegram</h4>
-                                <p>Link your Telegram bot token in one click. Your agent gets its own dedicated identity on Telegram — private and secure.</p>
-                            </div> */}
+                            <div className="how-step-num">2</div>
+                            <div className="how-step-content">
+                                <h4>Configure Your Agent</h4>
+                                <p>Personalize your agent's settings and connect it to your preferred web channels or workflows in one click. Private and secure.</p>
+                            </div>
                         </div>
                         <div className="how-step">
+                            <div className="how-step-num">3</div>
                             <div className="how-step-content">
                                 <h4>Deploy in 30 Seconds</h4>
                                 <p>We provision a dedicated cloud VM with pre-baked infrastructure. Your agent boots instantly with HTTPS encryption out of the box.</p>
