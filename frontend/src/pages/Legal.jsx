@@ -9,7 +9,7 @@ const Legal = ({ page }) => {
                 return (
                     <>
                         <h1>About Us</h1>
-                        <p>Welcome to OpenClaw SaaS (operated by Inshort Live). We are a technology company dedicated to democratizing access to autonomous AI agents.</p>
+                        <p>Welcome to Inshort Agents (operated by Inshort Live). We are a technology company dedicated to democratizing access to autonomous AI agents.</p>
                         <p>Our mission is to help founders, developers, and professionals automate their workflows by providing instant, secure, and scalable cloud infrastructure for AI agents. We handle the complex DevOps—provisioning Google Cloud VMs, configuring Docker, setting up reverse proxies, and securing networks—so that our users can focus entirely on building and deploying their agentic workflows.</p>
                         <p>Our platform strictly deals in digital software as a service (SaaS) and cloud computing resources.</p>
                         <h3>Business Category</h3>
@@ -22,7 +22,7 @@ const Legal = ({ page }) => {
                     <>
                         <h1>Privacy Policy</h1>
                         <p>Last updated: March 2026</p>
-                        <p>OpenClaw SaaS ("we", "our", or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal data when you use our website and services.</p>
+                        <p>Inshort Agents ("we", "our", or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal data when you use our website and services.</p>
                         <h3>1. Information We Collect</h3>
                         <p>We only collect the information necessary to provide our services. This includes:</p>
                         <ul>
@@ -40,7 +40,7 @@ const Legal = ({ page }) => {
                 return (
                     <>
                         <h1>Terms of Service</h1>
-                        <p>By accessing or using OpenClaw SaaS, you agree to comply with these terms.</p>
+                        <p>By accessing or using Inshort Agents, you agree to comply with these terms.</p>
                         <h3>1. Provision of Service</h3>
                         <p>We provide hosted virtual machines and software environments. We are not responsible for the content, code, or actions executed by the AI agents you deploy on our infrastructure.</p>
                         <h3>2. Acceptable Use</h3>
@@ -72,12 +72,12 @@ const Legal = ({ page }) => {
                 return (
                     <>
                         <h1>Shipping & Delivery Policy</h1>
-                        <p><strong>OpenClaw SaaS provides exclusively digital services and cloud software. As such, no physical goods are shipped.</strong></p>
+                        <p><strong>Inshort Agents provides exclusively digital services and cloud software. As such, no physical goods are shipped.</strong></p>
                         <h3>Delivery Timeline</h3>
                         <p>Delivery of our service happens instantaneously online.</p>
                         <ul>
                             <li>Upon successful payment confirmation, our backend API immediately triggers the creation of your dedicated virtual machine.</li>
-                            <li>Your OpenClaw gateway and n8n workspaces are typically fully booted and accessible within <strong>30 to 60 seconds</strong> of purchase.</li>
+                            <li>Your Inshort Agent gateway and n8n workspaces are typically fully booted and accessible within <strong>30 to 60 seconds</strong> of purchase.</li>
                             <li>You will immediately see your active instance on your Dashboard, along with its unique IP address and secure HTTPS URL.</li>
                         </ul>
                         <p>There are no tracking numbers, shipping fees, or delivery delays. If your instance does not appear on your dashboard within 5 minutes of payment, please contact support immediately.</p>

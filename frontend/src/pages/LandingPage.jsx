@@ -30,11 +30,11 @@ const LandingPage = ({ setCurrentPage }) => {
                     </div>
 
                     <h1 className="hero-title" style={{ fontSize: '4rem', lineHeight: 1.1, marginBottom: '24px' }}>
-                        OpenClaw + Hosted n8n,<br /><span className="highlight-text">Live in 60s.</span>
+                        Inshort Agent + Hosted n8n,<br /><span className="highlight-text">Live in 60s.</span>
                     </h1>
 
                     <p className="hero-subtitle" style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px auto' }}>
-                        Deploy autonomous AI agents with full computer access. Each instance comes pre-configured with OpenClaw and n8n on a dedicated Google Cloud VM.
+                        Deploy autonomous AI agents with full computer access. Each instance comes pre-configured with Inshort Agent and n8n on a dedicated Google Cloud VM.
                     </p>
 
                     <div className="hero-actions" style={{ display: 'flex', justifyContent: 'center', gap: '16px' }}>
@@ -62,7 +62,7 @@ const LandingPage = ({ setCurrentPage }) => {
                         <div className="feature-card glass-panel bento-item" style={{ padding: '40px' }}>
                             <div className="feature-icon" style={{ marginBottom: '20px' }}><Zap size={32} color="#f59e0b" /></div>
                             <h3 style={{ fontSize: '1.25rem', marginBottom: '16px' }}>Bundled n8n Hosting</h3>
-                            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Connect your agent to 1000+ apps. Your dedicated n8n instance is pre-authenticated and wired directly to your OpenClaw agent for instant automation.</p>
+                            <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem' }}>Connect your agent to 1000+ apps. Your dedicated n8n instance is pre-authenticated and wired directly to your Inshort Agent for instant automation.</p>
                         </div>
 
                         <div className="feature-card glass-panel bento-item" style={{ padding: '40px' }}>
@@ -84,13 +84,13 @@ const LandingPage = ({ setCurrentPage }) => {
             <section className="testimonials-section" style={{ padding: '80px 0', borderTop: '1px solid var(--border-color)', background: 'rgba(5, 10, 21, 0.4)' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Founders are scaling with OpenClaw</h2>
+                        <h2 style={{ fontSize: '2.5rem', marginBottom: '16px' }}>Founders are scaling with Inshort Agent</h2>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto' }}>Join founders and professionals automating their infrastructure.</p>
                     </div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', maxWidth: '1000px', margin: '0 auto' }}>
                         {[
-                            { name: '@jonahships_', text: 'Setup OpenClaw yesterday. All I have to say is, wow. The fact that it can just browse the web while I sleep is crazy.' },
+                            { name: '@jonahships_', text: 'Setup Inshort Agent yesterday. All I have to say is, wow. The fact that it can just browse the web while I sleep is crazy.' },
                             { name: '@davemorin', text: 'First time I have felt like I am living in the future. Just told my agent to build an automation and it did it in n8n in 60 seconds.' },
                             { name: '@therno', text: 'It\'s literally running my infrastructure. Customer success, data scraping, and PR reviews. Best $49 I spend every month.' },
                             { name: '@nateliason', text: 'Yeah this was 1,000% worth it. It autonomously built a web scraper for me.' },
@@ -135,7 +135,7 @@ const LandingPage = ({ setCurrentPage }) => {
                             </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 32px 0', flex: 1 }}>
                                 {[
-                                    '1 Dedicated OpenClaw VM', 
+                                    '1 Dedicated Inshort VM', 
                                     'Dedicated Core Instance',
                                     'Web API Access',
                                     '500+ Daily Requests'
@@ -158,7 +158,7 @@ const LandingPage = ({ setCurrentPage }) => {
                             </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 32px 0', flex: 1 }}>
                                 {[
-                                    '2 Dedicated OpenClaw VMs', 
+                                    '2 Dedicated Inshort VMs', 
                                     '2 Bundled n8n Workspaces', 
                                     'Advanced API Integrations',
                                     'Priority Scaling'
@@ -180,7 +180,7 @@ const LandingPage = ({ setCurrentPage }) => {
                             </div>
                             <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 32px 0', flex: 1 }}>
                                 {[
-                                    '3 Dedicated OpenClaw VMs', 
+                                    '3 Dedicated Inshort VMs', 
                                     '3 Bundled n8n Workspaces', 
                                     'Unlimited AI requests', 
                                     'Custom Sandbox Integrations'
@@ -200,12 +200,12 @@ const LandingPage = ({ setCurrentPage }) => {
             <section id="about" style={{ padding: '80px 0', borderTop: '1px solid var(--border-color)' }}>
                 <div className="container">
                     <div style={{ textAlign: 'center', marginBottom: '40px', maxWidth: '800px', margin: '0 auto' }}>
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>About OpenClaw SaaS</h2>
+                        <h2 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>About Inshort Agents</h2>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '24px' }}>
                             We noticed a trend: builders were spending hours trying to wrangle GCP, Docker, and n8n just to get a single multi-modal agent running.
                         </p>
                         <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.8 }}>
-                            That's why we built this SaaS. With one click, you get an isolated, secure VM with OpenClaw and n8n perfectly configured. Because you should be building agentic workflows, not fighting with server deployments.
+                            That's why we built this SaaS. With one click, you get an isolated, secure VM with Inshort Agent and n8n perfectly configured. Because you should be building agentic workflows, not fighting with server deployments.
                         </p>
                     </div>
                 </div>
@@ -221,9 +221,9 @@ const LandingPage = ({ setCurrentPage }) => {
 
                     <div style={{ maxWidth: '800px', margin: '0 auto' }}>
                         {[
-                            { q: 'What exactly gets deployed?', a: 'A dedicated e2-medium Google Cloud VM running OpenClaw, Caddy for reverse proxy, and n8n for workflows.' },
+                            { q: 'What exactly gets deployed?', a: 'A dedicated e2-medium Google Cloud VM running Inshort Agent, Caddy for reverse proxy, and n8n for workflows.' },
                             { q: 'How long does it take?', a: 'Less than 60 seconds. The VM spins up, fetches a public IP, registers SSL certificates, and boots the Docker containers automatically.' },
-                            { q: 'Is my instance secure?', a: 'Yes. Each user gets their own isolated VM behind Google\'s firewall. Only you can access your n8n workflows and OpenClaw logs.' },
+                            { q: 'Is my instance secure?', a: 'Yes. Each user gets their own isolated VM behind Google\'s firewall. Only you can access your n8n workflows and Inshort Agent logs.' },
                             { q: 'Can I choose my AI model?', a: 'We bundle OpenRouter integration by default, which gives you access to hundreds of models including GPT-4o, Claude 3.5, and Llama 3.' },
                             { q: 'How do I cancel a deployed agent?', a: 'You can destroy a VM at any time from your dashboard. The billing is prorated and the VM is permanently deleted.' }
                         ].map((faq, index) => (

@@ -16,7 +16,7 @@ const PLANS = [
         iconColor: '#3b82f6',
         highlight: false,
         features: [
-            { text: '1 Dedicated OpenClaw VM', included: true, bold: true },
+            { text: '1 Dedicated Inshort VM', included: true, bold: true },
             { text: 'Single Shared Instance', included: true },
             { text: 'Web API Access', included: true },
             { text: 'Standard SLA', included: true },
@@ -29,7 +29,7 @@ const PLANS = [
             { text: 'WhatsApp Integration', included: false },
         ],
         agentSlots: 1,
-        agentTemplates: ['OpenClaw Agent', 'n8n Pre-configured', 'SSL Automatic'],
+        agentTemplates: ['Inshort Agent', 'n8n Pre-configured', 'SSL Automatic'],
         cta: 'Get Started',
     },
     {
@@ -43,7 +43,7 @@ const PLANS = [
         highlight: true,
         badge: 'Most Popular',
         features: [
-            { text: '2 Dedicated OpenClaw VMs', included: true, bold: true },
+            { text: '2 Dedicated Inshort VMs', included: true, bold: true },
             { text: '3 Bundled n8n Workspaces', included: true, bold: true },
             { text: 'Advanced API Integrations', included: true },
             { text: 'Dedicated High-Perf VM (e2-standard-4)', included: true },
@@ -56,7 +56,7 @@ const PLANS = [
             { text: 'White-label (Your Brand)', included: false },
         ],
         agentSlots: 2,
-        agentTemplates: ['OpenClaw Scaled', 'n8n Advanced', 'Priority Network'],
+        agentTemplates: ['Inshort Agent Scaled', 'n8n Advanced', 'Priority Network'],
         cta: 'Deploy Pro Fleet',
     },
     {
@@ -69,7 +69,7 @@ const PLANS = [
         iconColor: '#f59e0b',
         highlight: false,
         features: [
-            { text: '3 Dedicated OpenClaw VMs', included: true, bold: true },
+            { text: '3 Dedicated Inshort VMs', included: true, bold: true },
             { text: '3 Bundled n8n Workspaces', included: true, bold: true },
             { text: 'All Integrations (TG, WA, Slack, Web)', included: true },
             { text: 'Dedicated High-Perf VM (e2-standard-4)', included: true },
@@ -147,7 +147,7 @@ const Billing = () => {
                 key: orderData.keyId,
                 amount: orderData.amount,
                 currency: orderData.currency,
-                name: 'OpenClaw SaaS',
+                name: 'Inshort Agents',
                 description: `${orderData.planName} Plan — ${annual ? 'Annual' : 'Monthly'}`,
                 order_id: orderData.orderId,
                 prefill: {
@@ -318,13 +318,13 @@ const Billing = () => {
                         </div>
                         <div className="breakdown-item">
                             <Bot size={20} color="#a855f7" />
-                            <h4>OpenClaw Gateway</h4>
+                            <h4>Inshort Gateway</h4>
                             <p>The core engine allowing your agent to interact with files, bash, and external networks securely.</p>
                         </div>
                         <div className="breakdown-item">
                             <Shield size={20} color="#10b981" />
                             <h4>n8n Workflow Engine</h4>
-                            <p>Visual automation builder included — connect APIs, schedule tasks, build custom pipelines directly hooked to OpenClaw.</p>
+                            <p>Visual automation builder included — connect APIs, schedule tasks, build custom pipelines directly hooked to Inshort Agent.</p>
                         </div>
                         {/* Telegram breakdown removed */}
                         <div className="breakdown-item">

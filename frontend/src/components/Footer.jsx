@@ -6,7 +6,7 @@ const Footer = ({ setCurrentPage }) => {
         <footer className="site-footer">
             <div className="container footer-container">
                 <div className="footer-brand">
-                    <h3>OpenClaw SaaS</h3>
+                    <h3>Inshort Agents</h3>
                     <p>Automate your life and business with dedicated AI agents. Delivered instantly to the cloud.</p>
                 </div>
 
@@ -35,7 +35,7 @@ const Footer = ({ setCurrentPage }) => {
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} OpenClaw SaaS (Inshort Live). All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Inshort Agents (Inshort Live). All rights reserved.</p>
             </div>
         </footer>
     );

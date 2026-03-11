@@ -144,7 +144,7 @@ const Dashboard = () => {
                             {isForcing === agent.id ? <RefreshCw size={12} className="spinning" /> : '⚡'} Force Ready
                         </button>
                         <a href={agent.openClawUrl} target="_blank" rel="noreferrer" className="url-badge" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.8rem', color: '#3b82f6', textDecoration: 'none', background: 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.2)', padding: '6px 12px', borderRadius: '6px' }}>
-                            <Server size={12} /> Try OpenClaw Anyway
+                            <Server size={12} /> Try Inshort Agent Anyway
                         </a>
                     </div>
                 </div>
@@ -161,7 +161,7 @@ const Dashboard = () => {
                     <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
                         {/* Per-service indicators */}
                         <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.75rem', color: agent.ocReady ? '#10b981' : 'var(--text-secondary)', padding: '4px 8px', borderRadius: '4px', background: agent.ocReady ? 'rgba(16, 185, 129, 0.1)' : 'rgba(255,255,255,0.03)' }}>
-                            {agent.ocReady ? <CheckCircle2 size={10} /> : <RefreshCw size={10} className="spinning" />} OpenClaw
+                            {agent.ocReady ? <CheckCircle2 size={10} /> : <RefreshCw size={10} className="spinning" />} Inshort Agent
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.75rem', color: agent.n8nReady ? '#10b981' : 'var(--text-secondary)', padding: '4px 8px', borderRadius: '4px', background: agent.n8nReady ? 'rgba(16, 185, 129, 0.1)' : 'rgba(255,255,255,0.03)' }}>
                             {agent.n8nReady ? <CheckCircle2 size={10} /> : <RefreshCw size={10} className="spinning" />} n8n
@@ -178,7 +178,7 @@ const Dashboard = () => {
         return (
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
                 <a href={agent.openClawUrl} target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontFamily: 'monospace', color: '#3b82f6', textDecoration: 'none', background: 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.2)', padding: '8px 12px', borderRadius: '6px', transition: 'all 0.2s ease' }} className="url-badge">
-                    <Server size={14} /> OpenClaw Gateway
+                    <Server size={14} /> Inshort Gateway
                 </a>
                 <a href={agent.n8nUrl} target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', fontFamily: 'monospace', color: '#f59e0b', textDecoration: 'none', background: 'rgba(245, 158, 11, 0.1)', border: '1px solid rgba(245, 158, 11, 0.2)', padding: '8px 12px', borderRadius: '6px', transition: 'all 0.2s ease' }} className="url-badge">
                     <Zap size={14} /> n8n Workspace

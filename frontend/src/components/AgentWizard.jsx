@@ -79,7 +79,7 @@ const AgentWizard = () => {
         }
         
         // if (!telegramToken) {
-        //     alert('A Telegram Bot Token is mandatory to bind your OpenClaw agent.');
+        //     alert('A Telegram Bot Token is mandatory to bind your Inshort Agent.');
         //     return;
         // }
 
@@ -167,11 +167,11 @@ const AgentWizard = () => {
                 <p className="subtitle" style={{ color: 'var(--text-secondary)', marginBottom: '32px' }}>Your dedicated Unified VM is now LIVE with automatic HTTPS via Caddy.</p>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', maxWidth: '600px', margin: '0 auto' }}>
-                    {/* OpenClaw Gateway */}
+                    {/* Inshort Gateway */}
                     <div className="service-url" style={{ background: 'rgba(59, 130, 246, 0.05)', padding: '20px', borderRadius: '12px', border: '1px solid rgba(59, 130, 246, 0.2)', display: 'flex', flexDirection: 'column', gap: '8px', textAlign: 'left' }}>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                             <Send size={18} color="#3b82f6" />
-                            <span className="label" style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>OpenClaw Gateway</span>
+                            <span className="label" style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>Inshort Gateway</span>
                             <ShieldCheck size={14} color="#10b981" style={{ marginLeft: 'auto' }} />
                         </div>
                         <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>Direct access to your AI Agent via Telegram.</p>
@@ -187,7 +187,7 @@ const AgentWizard = () => {
                             <span className="label" style={{ fontSize: '0.9rem', color: '#fff', fontWeight: 600 }}>n8n Automation Workspace</span>
                             <ShieldCheck size={14} color="#10b981" style={{ marginLeft: 'auto' }} />
                         </div>
-                        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>Visual node editor for workflows, bridged to OpenClaw.</p>
+                        <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', margin: 0 }}>Visual node editor for workflows, bridged to Inshort Agent.</p>
                         <a href={n8nUrl} target="_blank" rel="noreferrer" style={{ marginTop: '8px', color: '#f59e0b', textDecoration: 'none', background: 'rgba(245, 158, 11, 0.1)', padding: '8px 12px', borderRadius: '6px', fontFamily: 'monospace', fontSize: '0.9rem', display: 'inline-block', width: 'fit-content' }}>
                             {n8nUrl}
                         </a>
@@ -227,7 +227,7 @@ const AgentWizard = () => {
                         <div>
                             <h4 style={{ color: '#fff', fontSize: '1.05rem', marginBottom: '8px' }}>Single-VM Unified Architecture</h4>
                             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', lineHeight: 1.5, marginBottom: '16px' }}>
-                                Deploying this agent will automatically provision a **Single GCP VM** containing both your OpenClaw core and a dedicated **n8n Workspace**. They are securely bridged via webhooks by default.
+                                Deploying this agent will automatically provision a **Single GCP VM** containing both your Inshort Agent core and a dedicated **n8n Workspace**. They are securely bridged via webhooks by default.
                             </p>
                             <div style={{ display: 'flex', gap: '12px' }}>
                                 <span style={{ fontSize: '0.8rem', color: '#f59e0b', background: 'rgba(245, 158, 11, 0.1)', padding: '4px 8px', borderRadius: '4px' }}>Unified Compute</span>
