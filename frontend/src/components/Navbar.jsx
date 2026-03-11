@@ -43,6 +43,7 @@ const Navbar = ({ setCurrentPage }) => {
                     <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('landing'); window.scrollTo(0, 0); }}>Platform</a>
                     <a href="#" className="nav-link-agents" onClick={(e) => { e.preventDefault(); setCurrentPage('agents'); }}><span className="nav-dot"></span> Agents</a>
                     <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('billing'); }}>Pricing</a>
+                    <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('partners'); }}>Partners</a>
                 </div>
 
                 <div className="nav-actions desktop">
@@ -77,6 +78,7 @@ const Navbar = ({ setCurrentPage }) => {
                     <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('landing'); setIsOpen(false); }}>Platform</a>
                     <a href="#" className="nav-link-agents" onClick={(e) => { e.preventDefault(); setCurrentPage('agents'); setIsOpen(false); }}><span className="nav-dot"></span> Agents</a>
                     <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('billing'); setIsOpen(false); }}>Pricing</a>
+                    <a href="#" onClick={(e) => { e.preventDefault(); setCurrentPage('partners'); setIsOpen(false); }}>Partners</a>
                     {currentUser ? (
                         <>
                             <button className="primary-button full-width" onClick={() => { setCurrentPage('dashboard'); setIsOpen(false); }}>Dashboard</button>

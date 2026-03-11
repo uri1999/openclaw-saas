@@ -16,6 +16,7 @@ const Footer = ({ setCurrentPage }) => {
                         <button onClick={() => setCurrentPage('landing')}>Home</button>
                         <button onClick={() => setCurrentPage('agents')}>Agent Catalog</button>
                         <button onClick={() => setCurrentPage('billing')}>Pricing</button>
+                        <button onClick={() => setCurrentPage('partners')}>Partners</button>
                     </div>
 
                     <div className="link-column">

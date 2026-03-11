@@ -4,6 +4,7 @@ import LandingPage from './pages/LandingPage';
 import Dashboard from './pages/Dashboard';
 import Billing from './pages/Billing';
 import SkilledAgents from './pages/SkilledAgents';
+import Partners from './pages/Partners';
 import Legal from './pages/Legal';
 import Footer from './components/Footer';
 import { useAuth } from './contexts/AuthContext';
@@ -23,6 +24,14 @@ function App() {
     const [currentPage, setCurrentPage] = React.useState('landing');
     const { currentUser } = useAuth();
 
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const ref = params.get('ref');
+        if (ref) {
+            localStorage.setItem('inshort_ref', ref);
+        }
+    }, []);
+
     return (
         <div className="app-container">
             <Navbar setCurrentPage={setCurrentPage} />
@@ -38,6 +47,12 @@ function App() {
                 {currentPage === 'billing' && <Billing />}
 
                 {currentPage === 'agents' && <SkilledAgents setCurrentPage={setCurrentPage} />}
+
+                {currentPage === 'partners' && (
+                    <ProtectedRoute currentUser={currentUser} setCurrentPage={setCurrentPage}>
+                        <Partners setCurrentPage={setCurrentPage} />
+                    </ProtectedRoute>
+                )}
 
                 {['about', 'privacy', 'terms', 'refunds', 'shipping', 'contact'].includes(currentPage) && (
                     <Legal page={currentPage} />

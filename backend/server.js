@@ -693,6 +693,42 @@ app.post('/api/payment/verify', async (req, res) => {
             updatedAt: admin.firestore.FieldValue.serverTimestamp(),
         }, { merge: true });
 
+        // Handle Affiliate Commissions
+        try {
+            const userDoc = await db.collection('users').doc(uid).get();
+            if (userDoc.exists) {
+                const userData = userDoc.data();
+                if (userData.referredBy) {
+                    const referralCode = userData.referredBy;
+                    const partnersQuery = await db.collection('users').where('referralCode', '==', referralCode).limit(1).get();
+                    if (!partnersQuery.empty) {
+                        const partnerDoc = partnersQuery.docs[0];
+                        const partnerUid = partnerDoc.id;
+                        
+                        const baseAmount = plan ? plan.amount : 0;
+                        const chargedAmountInCents = annual ? Math.round(baseAmount * 0.8 * 12) : baseAmount;
+                        const commissionInCents = Math.round(chargedAmountInCents * 0.20);
+
+                        await db.collection('commissions').add({
+                            partnerUid,
+                            referredUserUid: uid,
+                            planId,
+                            annual: !!annual,
+                            orderAmount: chargedAmountInCents,
+                            commissionAmount: commissionInCents,
+                            currency: plan ? plan.currency : 'USD',
+                            razorpayOrderId: razorpay_order_id,
+                            status: 'pending',
+                            createdAt: admin.firestore.FieldValue.serverTimestamp()
+                        });
+                        console.log(`[Affiliate] Logged ${commissionInCents} cents commission for partner ${partnerUid}`);
+                    }
+                }
+            }
+        } catch (commErr) {
+            console.error('[Affiliate] Failed to process commission:', commErr);
+        }
+
         console.log(`[Razorpay] Payment verified for ${uid} — Plan: ${planId}`);
         res.json({ success: true, message: 'Subscription activated', planId });
     } catch (error) {
@@ -727,6 +763,80 @@ app.get('/api/payment/status/:uid', async (req, res) => {
     } catch (error) {
         console.error('[Razorpay] Status error:', error);
         res.status(500).json({ error: 'Failed to fetch subscription status' });
+    }
+});
+
+// ==========================================
+// AFFILIATE / PARTNER ENDPOINTS
+// ==========================================
+
+// Get partner affiliate stats
+app.get('/api/partner/stats/:uid', async (req, res) => {
+    try {
+        const { uid } = req.params;
+        const userDoc = await db.collection('users').doc(uid).get();
+        if (!userDoc.exists) return res.status(404).json({ error: 'User not found' });
+        
+        const userData = userDoc.data();
+        const referralCode = userData.referralCode;
+        if (!referralCode) {
+            return res.json({ isPartner: false, metrics: null });
+        }
+
+        const referralsQuery = await db.collection('users').where('referredBy', '==', referralCode).get();
+        const totalReferrals = referralsQuery.size;
+
+        const commissionsQuery = await db.collection('commissions').where('partnerUid', '==', uid).get();
+        let totalEarningsCents = 0;
+        let pendingEarningsCents = 0;
+
+        commissionsQuery.forEach(doc => {
+            const data = doc.data();
+            if (data.status === 'paid') {
+                totalEarningsCents += data.commissionAmount || 0;
+            } else {
+                pendingEarningsCents += data.commissionAmount || 0;
+            }
+        });
+
+        res.json({
+            isPartner: true,
+            referralCode,
+            metrics: {
+                totalReferrals,
+                totalEarnings: totalEarningsCents / 100,
+                pendingEarnings: pendingEarningsCents / 100
+            }
+        });
+    } catch (error) {
+        console.error('[Affiliate] Stats error:', error);
+        res.status(500).json({ error: 'Failed to fetch partner stats' });
+    }
+});
+
+// Register as a partner
+app.post('/api/partner/register', async (req, res) => {
+    try {
+        const { uid } = req.body;
+        const userRef = db.collection('users').doc(uid);
+        const userDoc = await userRef.get();
+        
+        if (!userDoc.exists) {
+            // Document might not exist if they haven't saved any settings yet, but Auth user exists
+            await userRef.set({}, { merge: true });
+        }
+        
+        let referralCode = userDoc?.data()?.referralCode;
+        if (!referralCode) {
+            const crypto = require('crypto');
+            referralCode = crypto.randomBytes(4).toString('hex').toUpperCase();
+            await userRef.set({ isPartner: true, referralCode }, { merge: true });
+        }
+        
+        res.json({ success: true, referralCode });
+    } catch (error) {
+        console.error('[Affiliate] Registration error:', error);
+        res.status(500).json({ error: 'Failed to register partner' });
     }
 });
 

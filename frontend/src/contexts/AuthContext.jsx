@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { auth, googleProvider } from '../firebase-config';
+import { auth, googleProvider, db } from '../firebase-config';
+import { doc, getDoc, setDoc } from 'firebase/firestore';
 import {
     signInWithPopup,
     signOut,
@@ -30,7 +31,27 @@ export function AuthProvider({ children }) {
     }
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, user => {
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                try {
+                    const userRef = doc(db, 'users', user.uid);
+                    const userSnap = await getDoc(userRef);
+                    if (!userSnap.exists()) {
+                        const refCode = localStorage.getItem('inshort_ref');
+                        const userData = {
+                            email: user.email,
+                            displayName: user.displayName,
+                            createdAt: new Date(),
+                        };
+                        if (refCode) {
+                            userData.referredBy = refCode;
+                        }
+                        await setDoc(userRef, userData);
+                    }
+                } catch (e) {
+                    console.error("Firestore user sync error:", e);
+                }
+            }
             setCurrentUser(user);
             setLoading(false);
         });
