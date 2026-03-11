@@ -9,7 +9,7 @@ const Legal = ({ page }) => {
                 return (
                     <>
                         <h1>About Us</h1>
-                        <p>Welcome to OpenClaw SaaS (operated by Agrisocial / Inshort Live). We are a technology company dedicated to democratizing access to autonomous AI agents.</p>
+                        <p>Welcome to OpenClaw SaaS (operated by Inshort Live). We are a technology company dedicated to democratizing access to autonomous AI agents.</p>
                         <p>Our mission is to help founders, developers, and professionals automate their workflows by providing instant, secure, and scalable cloud infrastructure for AI agents. We handle the complex DevOps—provisioning Google Cloud VMs, configuring Docker, setting up reverse proxies, and securing networks—so that our users can focus entirely on building and deploying their agentic workflows.</p>
                         <p>Our platform strictly deals in digital software as a service (SaaS) and cloud computing resources.</p>
                         <h3>Business Category</h3>
@@ -90,7 +90,7 @@ const Legal = ({ page }) => {
                         <p>If you have any questions, technical issues, or billing inquiries, we are here to help!</p>
                         <div className="contact-details">
                             <p><strong>Email:</strong> admin@inshort.live</p>
-                            <p><strong>Operating Entity:</strong> Agrisocial / Inshort Live</p>
+                            <p><strong>Operating Entity:</strong> Inshort Live</p>
                             <br />
                             <p>Our support team generally responds within 24 hours on business days.</p>
                         </div>

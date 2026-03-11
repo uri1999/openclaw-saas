@@ -35,7 +35,7 @@ const Footer = ({ setCurrentPage }) => {
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} OpenClaw SaaS (Agrisocial / Inshort Live). All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} OpenClaw SaaS (Inshort Live). All rights reserved.</p>
             </div>
         </footer>
     );
