@@ -78,10 +78,10 @@ const AgentWizard = () => {
             return;
         }
         
-        if (!telegramToken) {
-            alert('A Telegram Bot Token is mandatory to bind your OpenClaw agent.');
-            return;
-        }
+        // if (!telegramToken) {
+        //     alert('A Telegram Bot Token is mandatory to bind your OpenClaw agent.');
+        //     return;
+        // }
 
         setLoading(true);
         const uniqueId = Date.now().toString(36);
@@ -217,22 +217,7 @@ const AgentWizard = () => {
             </div>
 
             <div className="wizard-section" style={{ marginTop: '32px' }}>
-                <label className="section-label">Configure Telegram Identity</label>
-                <div className="token-input-container fade-in">
-                    {telegramToken ? (
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid #10b981', padding: '16px', borderRadius: '8px' }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#10b981' }}>
-                                <CheckCircle size={18} />
-                                <span>Telegram Bot Ready</span>
-                            </div>
-                            <button className="secondary-button" style={{ padding: '6px 12px', fontSize: '0.85rem' }} onClick={() => setShowTelegramModal(true)}>Edit Token</button>
-                        </div>
-                    ) : (
-                        <button className="deploy-action-btn" style={{ marginTop: '0', background: 'rgba(59, 130, 246, 0.1)', border: '1px dashed rgba(59, 130, 246, 0.4)', color: '#3b82f6', boxShadow: 'none' }} onClick={() => setShowTelegramModal(true)}>
-                            <Send size={18} /> Bind Telegram Bot (Required)
-                        </button>
-                    )}
-                </div>
+                {/* Telegram Identity Configuration Omitted for Compliance */}
 
                 <div className="token-input-container fade-in" style={{ padding: '20px', marginTop: '16px', background: 'rgba(245, 158, 11, 0.05)', border: '1px solid rgba(245, 158, 11, 0.2)' }}>
                     <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>

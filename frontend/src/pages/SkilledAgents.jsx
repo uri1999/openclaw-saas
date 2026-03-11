@@ -11,7 +11,7 @@ const AGENTS = [
         gradient: 'agent-card-gradient-1',
         title: 'Birthday & Anniversary Reminder',
         description: 'Never miss a special day again. This agent tracks birthdays, anniversaries, and milestones across your contacts — and can auto-call or send personalized messages on the day.',
-        features: ['Auto-Calls', 'WhatsApp/Telegram', 'Contact Sync', 'Custom Messages'],
+        features: ['Auto-Calls', 'Web Chat', 'Contact Sync', 'Custom Messages'],
         badge: null,
         badgeColor: null,
     },
@@ -142,7 +142,7 @@ const AGENTS = [
         iconColor: '#ec4899',
         gradient: 'agent-card-gradient-6',
         title: 'Customer Support Agent',
-        description: 'Plug into your Telegram, WhatsApp, or website chat. Handles FAQs, order tracking, refunds, and escalations — trained on your business knowledge base.',
+        description: 'Plug into your WhatsApp or website chat. Handles FAQs, order tracking, refunds, and escalations — trained on your business knowledge base.',
         features: ['Multi-Channel', 'FAQ Training', 'Escalation', '24/7 Live'],
         badge: 'Business',
         badgeColor: '#ec4899',
@@ -197,7 +197,7 @@ const SkilledAgents = ({ setCurrentPage }) => {
             <section className="agents-section" id="agents-catalog">
                 <div className="agents-section-header">
                     <h2>Pre-Built Agent Catalog</h2>
-                    <p>Each agent runs on its own dedicated cloud VM with end-to-end encryption. Deploy in 30 seconds, accessible via Telegram.</p>
+                    <p>Each agent runs on its own dedicated cloud VM with end-to-end encryption. Deploy in 30 seconds.</p>
                 </div>
 
                 <div className="agents-grid">
@@ -238,10 +238,10 @@ const SkilledAgents = ({ setCurrentPage }) => {
                             </div>
                         </div>
                         <div className="how-step">
-                            <div className="hi-text">
+                            {/* <div className="hi-text">
                                 <h4>Connect Your Telegram</h4>
                                 <p>Link your Telegram bot token in one click. Your agent gets its own dedicated identity on Telegram — private and secure.</p>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="how-step">
                             <div className="how-step-content">

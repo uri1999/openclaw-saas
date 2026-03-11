@@ -18,7 +18,7 @@ const PLANS = [
         features: [
             { text: '1 Dedicated OpenClaw VM', included: true, bold: true },
             { text: 'Single Shared Instance', included: true },
-            { text: 'Telegram Integration', included: true },
+            /* { text: 'Telegram Integration', included: true }, */
             { text: 'Standard SLA', included: true },
             { text: '500 AI requests/month', included: true },
             { text: '5 Models (Gemini, GPT-4o-mini)', included: true },
@@ -45,7 +45,7 @@ const PLANS = [
         features: [
             { text: '2 Dedicated OpenClaw VMs', included: true, bold: true },
             { text: '3 Bundled n8n Workspaces', included: true, bold: true },
-            { text: 'Telegram + WhatsApp Integration', included: true },
+            /* { text: 'Telegram + WhatsApp Integration', included: true }, */
             { text: 'Dedicated High-Perf VM (e2-standard-4)', included: true },
             { text: '5,000 AI requests/month', included: true },
             { text: '50+ Models (Gemini, GPT-4o, Claude)', included: true },
@@ -327,9 +327,9 @@ const Billing = () => {
                             <p>Visual automation builder included — connect APIs, schedule tasks, build custom pipelines directly hooked to OpenClaw.</p>
                         </div>
                         <div className="breakdown-item">
-                            <Headphones size={20} color="#f59e0b" />
+                            {/* <Headphones size={20} color="#f59e0b" />
                             <h4>Telegram / WhatsApp</h4>
-                            <p>Talk to your agent directly on Telegram or WhatsApp. It's always online, always ready.</p>
+                            <p>Talk to your agent directly on Telegram or WhatsApp. It's always online, always ready.</p> */}
                         </div>
                     </div>
                 </div>
